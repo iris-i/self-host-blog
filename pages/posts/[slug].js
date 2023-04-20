@@ -1,6 +1,7 @@
 import { Layout } from "../../components/Layout";
 import { useTina } from "tinacms/dist/react";
 import { client } from "../../tina/__generated__/client";
+import { dbConnection } from "../../lib/databaseConnection";
 
 export default function Home(props) {
   // data passes though in production mode and data is updated to the sidebar data in edit-mode
@@ -26,7 +27,7 @@ export default function Home(props) {
 }
 
 export const getStaticPaths = async () => {
-  const { data } = await client.queries.postConnection();
+  const { data } = await dbConnection.queries.postConnection();
   const paths = data.postConnection.edges.map((x) => {
     return { params: { slug: x.node._sys.filename } };
   });
@@ -38,7 +39,7 @@ export const getStaticPaths = async () => {
 };
 
 export const getStaticProps = async (ctx) => {
-  const { data, query, variables } = await client.queries.post({
+  const { data, query, variables } = await dbConnection.queries.post({
     relativePath: ctx.params.slug + ".md",
   });
 
