@@ -1,7 +1,7 @@
 import { NextApiHandler } from "next";
 // import { isUserAuthorized } from "@tinacms/auth";
 import { databaseRequest } from "../../lib/databaseConnection";
-import { getServerSession } from "next-auth/next"
+import { getServerSession } from "next-auth"
 import { authOptions } from "./auth/[...nextauth]"
 
 const nextApiHandler = async (req, res) => {
@@ -9,7 +9,6 @@ const nextApiHandler = async (req, res) => {
   // const isAuthorized = headers.authorization === "Bearer some-token"
   const session = await getServerSession(req, res, authOptions)
   const userHasValidSession = Boolean(session)
-  console.log("Session in gql", session)
 
   // // Example if using TinaCloud for auth
   // const tinaCloudUser = await isUserAuthorized({

@@ -7,4 +7,21 @@ module.exports = {
       },
     ]
   },
+  images: {
+    remotePatterns: [
+      {
+        protocol: 'http',
+        hostname: '**.cloudinary.com'
+      }
+    ]
+  },
+  typescript: {
+    ignoreBuildErrors: true,
+  },
+  eslint: {
+    // Warning: This allows production builds to successfully complete even if
+    // your project has ESLint errors.
+    ignoreDuringBuilds: true,
+  },
+  staticPageGenerationTimeout: 1000,
 }

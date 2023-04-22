@@ -13,6 +13,7 @@ export default function Home(props) {
   });
 
   const content = data.page.body;
+
   return (
     <Layout>
       <TinaMarkdown content={content} />
