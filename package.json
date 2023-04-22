@@ -13,12 +13,13 @@
     "js-base64": "^3.7.5",
     "mongodb-level": "^0.0.2",
     "next": "^13.3.0",
+    "next-auth": "^4.22.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "tinacms": "^1.4.3"
+    "tinacms": "^0.0.0-20230421125326"
   },
   "devDependencies": {
-    "@tinacms/cli": "^1.5.2",
+    "@tinacms/cli": "^0.0.0-20230421125326",
     "eslint": "7",
     "eslint-config-next": "12.0.3"
   }
