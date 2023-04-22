@@ -16,7 +16,7 @@ export default function Home(props) {
       <code>
         <pre
           style={{
-            backgroundColor: "lightgray",
+            backgroundColor: "cornflower",
           }}
         >
           {JSON.stringify(data.post, null, 2)}
