@@ -17,7 +17,7 @@
     "next-tinacms-cloudinary": "^4.3.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "tinacms": "^0.0.0-20230421125326"
+    "tinacms": "^1.5.10"
   },
   "devDependencies": {
     "@tinacms/cli": "^0.0.0-20230421125326",
